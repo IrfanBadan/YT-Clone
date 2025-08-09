@@ -1,0 +1,413 @@
+/* ======= Base / Desktop styles (your original file) ======= */
+
+body{
+  background-color: #0f0f0f;
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85); /* semi-transparent dark */
+  backdrop-filter: blur(12px); /* blur background content */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  transition: background 0.3s ease;
+}
+.navMain{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.navFirstDiv{
+  display: flex;
+  /* justify-content: space-evenly; */
+  width: 20%;
+  height: auto;
+}
+.loginBtn{
+  color: white;
+  margin-bottom: 1em;
+  padding: 0;
+  &:hover{
+    color: red;
+  }
+}
+
+.profile{
+  animation: dance 1.2s infinite ease-in-out;
+  cursor: pointer;
+}
+@keyframes dance {
+   0%{
+     transform: rotate(0deg)scale(1);
+   }
+    20%{
+     transform: rotate(-10deg)scale(1.1);
+   }
+   40%{
+     transform: rotate(10deg)scale(1.1);
+   }
+   60%{
+     transform: rotate(-8deg)scale(1.05);
+   }
+   80%{
+     transform: rotate(8deg)scale(1.05);
+   }
+   100%{
+     transform: rotate(0deg)scale(1);
+   }
+
+}
+.brand-Name{
+  width:60%;
+  margin-left: 1.2em;
+  display: flex;
+  position: relative;
+}
+.logo{
+    width: 80%;
+    padding: 0px 0px 1em 0px;
+    margin-right: 0.1em;
+    margin-bottom: 0.4em;
+}
+.logo-image{
+  display: flex;
+  justify-content: end;
+  width: 80%;
+
+}
+.brand-in{
+  position: absolute;
+  top: 0.4em;
+  right: 0.3em;
+  font-size: 0.8em;
+  color: gray;
+}
+.navSecondDiv{
+  width: 40%;
+  height: auto;
+  position: relative;
+}
+
+.navThirdDiv{
+  /* border: 2px solid red; */
+  width: 22%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ThirdDivBtn{
+  border: 1px solid  gray; 
+  background-color: #343434;
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 1em;
+  
+  &:hover{
+    background: gray;
+  }
+}
+.searchBtn{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 70px;
+    height: 38px;
+    background:  #343434;
+    color: white;
+    border: 1px solid  #565656ae;
+    &:hover{
+      background-color: gray;
+    }
+}
+.searchInput{
+  background-color: transparent;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: 1px solid  #565656ae;
+  
+  &:focus{
+    background-color: transparent;
+  }
+}
+
+.input-group{
+  input::placeholder{
+    color: #565656ae;
+  }
+}
+
+.menu-title{
+  position: absolute;
+  top: 0.8em;
+  left: 5em;
+  color: white;
+}
+
+/* Burger Icon */
+.burger-menu {
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+  margin-left: 1em;
+}
+
+/* Sidebar Menu */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+  transition: 0.3s;
+  z-index: 1000;
+  padding-top: 60px;
+  font-size: 14px;
+}
+
+.sidebar-section {
+  margin-bottom: 1em;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #272727;
+  border-radius: 10px;
+}
+
+.sidebar a.active {
+  background-color: #272727;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.sidebar i {
+  font-size: 18px;
+}
+
+.sidebar .sidebar-heading {
+  padding: 8px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.sidebar-divider {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  margin: 10px 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #3ea6ff;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.sidebar {
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.micBtn{
+    color: white;
+    background: #343434;
+    padding: 3px 8px ;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    right: -11%;
+    margin-top: 0.2em;
+    &:hover{
+      background-color: gray;
+    }
+}
+
+.video-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 215px;
+  border-radius: 30px;
+  border: none;
+}
+
+/* ======= End original file ======= */
+
+
+/* ======= Mobile & tablet overrides (desktop-first approach) ======= */
+/* breakpoint used: <= 991px (tablet and smaller). Adjust if needed. */
+
+@media (max-width: 700px) {
+
+  /* Hide the left icon column (id="side-bar") to free space */
+  #side-bar { display: none !important; }
+
+  /* Main content spans full width and gets padding */
+  section {
+    margin-left: 0 !important;
+    width: 100% !important;
+    margin-top: 5.4em;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  /* NAV adjustments: keep elements in a compact row */
+  .navMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 12px;
+  }
+
+  .navFirstDiv {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+  }
+
+  /* Keep logo visible, hide long brand text to save space */
+  .brand-Name .navbar-brand { display: none !important; }
+  .brand-Name .logo { width: 32px; height: auto; display: block; padding-bottom: 0; }
+  .brand-in { display: none !important; }
+
+  .burger-menu { font-size: 1.45rem; cursor: pointer; color: #fff; }
+
+  /* Search area becomes flexible to occupy remaining width */
+  .navSecondDiv {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    width: auto;
+  }
+
+  .nav-form { width: 100%; max-width: 720px; margin: 0; }
+  .searchInput { padding: 8px 10px; font-size: 15px; }
+  .searchBtn { padding: 8px 10px; min-width: 44px; height: 38px; }
+
+  /* Right-side icons: hide the Create button text, keep icons */
+  .navThirdDiv { display: flex; align-items: center; gap: 10px; width: auto; }
+  .ThirdDivBtn { display: none !important; }
+
+  /* Filter buttons: fixed under navbar and horizontally scrollable */
+  .buttons {
+    position: fixed;
+    top: calc(56px + 6px); /* change if navbar height differs */
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 10px 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-sizing: border-box;
+  }
+  .buttons .btn { display: inline-block; margin-right: 8px; white-space: nowrap; }
+
+  /* Video grid -> single column (stack vertically) */
+  .video-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+    margin-top: 0;
+    padding: 12px;
+  }
+
+  /* Make iframes responsive using aspect-ratio, remove fixed height */
+  .video-container iframe,
+  iframe {
+    width: 100% !important;
+    aspect-ratio: 16/9;
+    display: block;
+    border: 0;
+    height: auto !important;
+    border-radius: 12px;
+  }
+
+  /* Off-canvas sidebar for mobile (class-based) */
+  .sidebar {
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    padding-top: 60px;
+    transition: left .25s ease;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.5);
+    border-right: 1px solid rgba(255,255,255,0.04);
+  }
+  .sidebar.open { left: 0; }
+
+  .sidebar .menu-title { margin-top: 1rem; margin-bottom: 0.5rem; left: 1rem; position: relative; }
+  .sidebar a { display: flex; align-items: center; gap: 12px; padding: 8px 12px; color: #fff; text-decoration: none; }
+  .sidebar hr { border-color: rgba(255,255,255,0.08); }
+
+  /* When sidebar open, prevent scrolling and show dim overlay via body class */
+  body.sidebar-open { overflow: hidden; }
+  body.sidebar-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1040;
+    pointer-events: none;
+  }
+
+  /* Reduce navbar padding for better fit */
+  nav.navbar.fixed-top { padding-top: 6px; padding-bottom: 6px; }
+
+  /* Touch target improvements */
+  .nav-form .form-control,
+  .searchBtn,
+  .burger-menu {
+    min-height: 40px;
+    touch-action: manipulation;
+  }
+}
+

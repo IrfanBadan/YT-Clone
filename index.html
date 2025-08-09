@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Tube</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./images/youtube-svgrepo-com.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black" >
+   <!--============ Nav ============== -->
+    <nav class="navbar navbar-expand-lg  py-3 pb-0 fixed-top">
+
+  <!-- ==========Nav Main div -->
+
+  <div class="navMain">
+   <!-- ========== Nav First Div ============= -->
+    <div class="navFirstDiv">
+      <div class="burger-menu" onclick="toggleSidebar()">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <!-- Sidebar Navigation (hidden by default) -->
+<div id="sidebar" class="sidebar">
+  <h3 class="menu-title">Menu</h3>>
+  <hr style="border: 1px solid white;">
+  <div class="sidebar-section">
+    <a href="#" class="active">
+      <i class="bi bi-house-door-fill"></i>
+      Home
+    </a>
+    <a href="#">
+      <i class="bi bi-lightning-fill"></i>
+      Shorts
+    </a>
+    <a href="#">
+      <i class="bi bi-collection-play"></i>
+      Subscriptions <span class="dot"></span>
+    </a>
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <div class="sidebar-section">
+    <div class="sidebar-heading fs-5 ">
+      You <i class="bi bi-chevron-right"></i>
+    </div>
+    <a href="#">
+      <i class="bi bi-clock-history"></i>
+      History
+    </a>
+    <a href="#">
+      <i class="bi bi-list-task"></i>
+      Playlists
+    </a>
+    <a href="#">
+      <i class="bi bi-camera-video"></i>
+      Your videos
+    </a>
+    <a href="#">
+      <i class="bi bi-clock"></i>
+      Watch Later
+    </a>
+    <a href="#">
+      <i class="bi bi-hand-thumbs-up"></i>
+      Liked videos
+    </a>
+
+     <hr class="sidebar-divider" />
+
+    <div class="sidebar-heading fs-5 ">
+      Explore <i class="bi bi-chevron-right"></i>
+    </div> 
+
+    <a href="#">
+      <i class="bi bi-cart-check"></i>
+      Shopping
+    </a>
+    <a href="#">
+      <i class="bi bi-music-note-beamed"></i>
+      Music
+    </a>    
+    <a href="#">
+      <i class="bi bi-film"></i>
+      Films
+    </a>
+    <a href="#">
+      <i class="bi bi-controller"></i>
+      Gaming
+    </a>
+    <a href="#">
+      <i class="bi bi-newspaper"></i>
+      News
+    </a>    
+  </div>
+</div>
+
+        <div class="brand-Name">
+         <div class="logo-image">
+         <img  src="./images/youtube-svgrepo-com.svg" class="logo" alt="">
+         </div> 
+
+    <a class="navbar-brand text-light fw-bolder fs-5" style="padding-top:0.4em ;" href="#">YouTube</a>   
+    <p class="brand-in">IN</p>    
+    </div>      
+    </div>
+   <!-- ========== Nav Second Div ============ -->
+    <div class="navSecondDiv">
+      <form class="d-flex nav-form mt-1 input-group" role="search">
+        <input class="form-control searchInput  " 
+         type="search" placeholder="Search"
+         aria-label="Search"/>
+        <button class="btn btn-outline-success searchBtn" type="submit"><i class="bi bi-search"></i></button>
+      </form>
+       <a href=""><i class="bi bi-mic-fill fs-5 micBtn"></i></a>      
+    </div>
+ 
+
+   <!-- ========== Nav Last Div ============== -->
+    <div class="navThirdDiv">
+      <button class="ThirdDivBtn  text-light"><i class="bi bi-plus-lg"></i>   Create</button>
+      <i class="bi bi-bell fs-3 " style="color: white; margin-bottom: 0.5em;"></i>
+      <div class="profile">
+            <button 
+             class="btn p-0 mb-3"
+             data-bs-toggle="modal"
+             data-bs-target="#exampleModal"
+             >
+            <a href="#"><i class="bi bi-person-circle fs-2  loginBtn "></i></a>         
+            </button>        
+      </div>
+    </div>
+  </div>
+  <div class="secondMain">
+    
+  </div>
+</nav>
+
+<div class="d-flex" >
+  <!-- Sidebar Icons -->
+  <div id="side-bar" style="position: fixed;">
+  <div class="icons-div bg-black text-light ps-2" style="margin-top: 5em;">
+    <div class="text-center mb-3">
+      <i class="bi bi-house-fill fs-4"></i>
+      <p><a href="#" class="text-light  text-decoration-none"style="font-size: 0.8em;" >Home</a></p>
+    </div>
+    <div class="text-center mb-3">
+      <i class="bi bi-globe2  fs-4"></i>
+      <p><a href="#" class="text-light text-decoration-none" style="font-size: 0.8em;" >Explorer</a></p>
+    </div>
+    <div class="text-center mb-3">
+      <i class="bi bi-collection-play  fs-4"></i>
+      <p><a href="#" class="text-light sub text-decoration-none " style="font-size: 0.8em;">Subscription</a></p>
+    </div>
+    <div class="text-center">
+      <i class="bi bi-person-circle  fs-4"></i>
+      <p><a href="#" class="text-light text-decoration-none" style="font-size: 0.8em;" >You</a></p>
+    </div>
+  </div>
+  </div>
+
+  <!-- Container Section  -->
+  <section  style="margin-top: 5.4em; margin-left: 5em; width: 95%;"  >
+  <div class="buttons ps-3 pb-2  w-100 lead" 
+    style="position: fixed;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    transition: background 0.3s ease; ">
+    <button class="btn btn-light fw-bold fs-6 me-1">All</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Music</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Mixes</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Recently Updated</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Movies</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Life style</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Naruto</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Live</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">AR Rahman Songs</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Comedy</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1">Pop Music</button>
+    <button class="btn btn-dark fw-bold fs-6 me-1"> News </button>
+    <!-- <button class="btn btn-dark fw-bold fs-6">Anime</button> -->
+    </div>
+    <!-- <div class="container "> -->
+      <div class="video-container" style="margin-top: 3em;">
+         <iframe src="https://www.youtube.com/embed/qeVfT2iLiu0?si=UGkR9osGpyZSmJ_Y"  allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/eGtDHht4VnU?si=msM6Ek_c1EoQXpiu"  allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/1JJWmntMF2o?si=xmTGEYSivq8p1EyL"  allowfullscreen></iframe>
+      </div>
+
+      <div class="video-container">
+         <iframe src="https://www.youtube.com/embed/EPN3YghHPe0?si=XX5LzJ9c5P7h88fD" allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/e61ahdBvIk4?si=RuscliJLnrH1vAxn"  allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/2qCpY38ompo?si=Rxlo-9brvUYkxzD_" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-container">
+         <iframe src="https://www.youtube.com/embed/ZBY2-g27oTQ?si=0xAYMQ3zJGFe2k4p"  allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/j_ihB_TdVrM?si=rFztfFXHkTV-YJRv"  allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/7fUljO-O_-A?si=a-li6w0YsDboq6ZW"  allowfullscreen></iframe>
+      </div>
+      <div class="video-container">
+         <iframe src="https://www.youtube.com/embed/KHZldi5AHZw?si=QM17-EAyNdxqxjCO"   allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/6Af6b_wyiwI?si=tpApyTdn1kabbMbG"   allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/mDOrn0jHw3o?si=xAPnOCuZWI6Al_yw"  allowfullscreen></iframe>
+      </div>
+      <div class="video-container">
+         <iframe src="https://www.youtube.com/embed/6KvcChyHHoM?si=X-pVir_cDb_zbSui" allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/hfzo5nvkiEM?si=VnQ67zPDns9uZeKf" allowfullscreen></iframe>
+         <iframe src="https://www.youtube.com/embed/7CshC-7AGiI?si=5mj_YplTG73wP3u0"  allowfullscreen></iframe>
+      </div>      
+      </div>    
+  </section>
+</div> 
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+     <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" 
+     style="background-image: url(./images/freepik__the-style-is-candid-image-photography-with-natural__54077.png);
+     background-size: cover;">
+      <div class="modal-header" style="border-bottom: none;">
+        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" 
+        style="width: 70%;
+        margin: 2.5em auto;
+        backdrop-filter: blur(2px);
+        border-radius: 20px;
+        border: 2px solid black;
+        ">
+        <form action="">
+          <h2 class="text-center mb-5" style="color: black;">Sign In</h2>
+          <!-- Div-1 -->
+           <div class="mb-3">
+            <input class="form-control mb-4"
+             id="first-name" type="text"
+              placeholder=" User Name" 
+              >
+           </div>
+           <!-- Div-2 -->
+           <div class="mb-3">
+            <input class="form-control mb-5" id="last-name" type="password" placeholder="password">
+           </div>
+           <!-- Div-3 -->
+           <div class="mb-3">
+            <button style="width: 100%; border-radius: 10px; padding: 7px;">Login</button>
+           </div>
+           <!-- Div-4 -->
+           <div class="mb-3 d-flex justify-content-between">
+           <p><a href="#" style="text-decoration: none; color: black;">Forget password ?</a></p>
+           <p><a href="#" style="text-decoration: none; margin-right: 1em; color: black;">SignUp</a></p>
+           </div>                      
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
