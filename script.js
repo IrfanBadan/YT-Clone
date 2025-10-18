@@ -1,27 +1,32 @@
+// ===== Sidebar Toggle =====
+const sidebar = document.getElementById("sidebar");
+const burger = document.querySelector(".burger-menu");
+
 function toggleSidebar() {
-  const sidebar = document.getElementById("sidebar");
-  const isOpen = sidebar.style.left === "0px";
+  const isOpen = sidebar.classList.contains("open");
 
   if (isOpen) {
-    sidebar.style.left = "-280px";
+    sidebar.classList.remove("open");
     document.removeEventListener("click", outsideClickListener);
   } else {
-    sidebar.style.left = "0px";
+    sidebar.classList.add("open");
     setTimeout(() => {
       document.addEventListener("click", outsideClickListener);
-    }, 0); // Add listener *after* this click finishes
+    }, 0); // Prevent immediate close
   }
 }
 
 function outsideClickListener(event) {
-  const sidebar = document.getElementById("sidebar");
-  const burger = document.querySelector(".burger-menu");
-
   if (!sidebar.contains(event.target) && !burger.contains(event.target)) {
-    sidebar.style.left = "-250px";
+    sidebar.classList.remove("open");
     document.removeEventListener("click", outsideClickListener);
   }
 }
 
-const loginBtn =document.getElementById("login-btn")
-console.log(loginBtn)
+// Attach burger click
+burger.addEventListener("click", toggleSidebar);
+
+
+// ===== Login Button (for debugging / modal) =====
+const loginBtn = document.getElementById("login-btn");
+console.log(loginBtn);

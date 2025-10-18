@@ -418,3 +418,132 @@ body{
 
 }
 
+@media (max-width: 991px) {
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+
+/* ===== Video Grid ===== */
+.video-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16/9; /* keeps video ratio */
+  border: none;
+  border-radius: 12px;
+}
+
+/* ===== Filter Buttons scroll on mobile ===== */
+@media (max-width: 700px) {
+  .video-section {
+    margin-left: 0 !important;
+    padding: 0 12px;
+  }
+
+  .buttons {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .buttons .btn {
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+
+
+/* ===== Navbar mobile fix ===== */
+@media (max-width: 700px) {
+  nav.navbar.fixed-top {
+    padding: 6px 10px;
+    height: 56px;
+  }
+
+  .navFirstDiv {
+    gap: 6px;
+  }
+
+  .brand-Name .navbar-brand { display: none; }
+  .brand-Name .logo { width: 32px; }
+
+  .navSecondDiv {
+    flex: 1;
+    margin: 0 4px;
+  }
+
+  .nav-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .searchBtn {
+    width: 36px;
+    padding: 6px;
+  }
+
+  .navThirdDiv {
+    gap: 10px;
+  }
+
+  .ThirdDivBtn {
+    display: none;
+  }
+
+  .micBtn {
+    display: none;
+  }
+}
+
+
+/* Scrollable filter buttons for mobile */
+@media (max-width: 700px) {
+  .buttons {
+    position: fixed;
+    top: 56px; /* below navbar */
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 6px 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+  }
+
+  .buttons .btn {
+    display: inline-block;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+}
+
+
+/* Mobile responsive video grid */
+@media (max-width: 700px) {
+  .video-grid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .video-grid iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+  }
+}
+
