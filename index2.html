@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Clone</title>
+  <title>YouTube</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./images/youtube-svgrepo-com.svg" type="image/x-icon">
+
+  <!-- Bootstrap Icons & CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-black">
 
   <!--============ Navbar ==============-->
@@ -74,7 +84,8 @@
         <a href="#"><i class="bi bi-mic-fill fs-5 micBtn"></i></a>
       </div>
 
-      <!-- ===== Right Section ===== -->
+      <!-- ========== Nav Third Div ============== -->
+            <!-- ===== Right Section ===== -->
       <div class="navThirdDiv">
         <button class="ThirdDivBtn text-light"><i class="bi bi-plus-lg"></i> Create</button>
         <i class="bi bi-bell fs-3 text-light"></i>
@@ -84,40 +95,8 @@
       </div>
 
     </div>
+    </div>
   </nav>
-
-  <!-- ===== Sidebar ===== -->
-  <div id="sidebar" class="sidebar">
-    <h3 class="menu-title">Menu</h3>
-    <hr class="sidebar-divider">
-    <div class="sidebar-section">
-      <a href="#" class="active"><i class="bi bi-house-door-fill"></i> Home</a>
-      <a href="#"><i class="bi bi-lightning-fill"></i> Shorts</a>
-      <a href="#"><i class="bi bi-collection-play"></i> Subscriptions <span class="dot"></span></a>
-    </div>
-
-    <hr class="sidebar-divider">
-
-    <div class="sidebar-section">
-      <div class="sidebar-heading fs-5">You <i class="bi bi-chevron-right"></i></div>
-      <a href="#"><i class="bi bi-clock-history"></i> History</a>
-      <a href="#"><i class="bi bi-list-task"></i> Playlists</a>
-      <a href="#"><i class="bi bi-camera-video"></i> Your videos</a>
-      <a href="#"><i class="bi bi-clock"></i> Watch Later</a>
-      <a href="#"><i class="bi bi-hand-thumbs-up"></i> Liked videos</a>
-    </div>
-
-    <hr class="sidebar-divider">
-
-    <div class="sidebar-section">
-      <div class="sidebar-heading fs-5">Explore <i class="bi bi-chevron-right"></i></div>
-      <a href="#"><i class="bi bi-cart-check"></i> Shopping</a>
-      <a href="#"><i class="bi bi-music-note-beamed"></i> Music</a>
-      <a href="#"><i class="bi bi-film"></i> Films</a>
-      <a href="#"><i class="bi bi-controller"></i> Gaming</a>
-      <a href="#"><i class="bi bi-newspaper"></i> News</a>
-    </div>
-  </div>
 
   <!--============ Sidebar Icons ==============-->
   <div class="d-flex">
@@ -142,18 +121,16 @@
       </div>
     </div>
 
-  <!-- ===== Main Content ===== -->
-  <div class="d-flex">
-    <section style="margin-top: 5.4em; margin-left: 5em; width: 95%;">
-
-      <!-- Filter Buttons -->
-      <div class="buttons ps-3 pb-2 w-100 lead btns" style="position: fixed; background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: background 0.3s ease;">
+    <!--============ Main Section ==============-->
+    <section style="margin-top: 5.2em; margin-left: 5em; width: 95%;">
+      <div class="buttons ps-3 pb-2 w-100 lead btns"
+        style="position: fixed; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: background 0.3s ease;">
         <button class="btn btn-light fw-bold fs-6 me-1">All</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">Music</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">Mixes</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">Recently Updated</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">Movies</button>
-        <button class="btn btn-dark fw-bold fs-6 me-1">Life style</button>
+        <button class="btn btn-dark fw-bold fs-6 me-1">Lifestyle</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">Naruto</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">Live</button>
         <button class="btn btn-dark fw-bold fs-6 me-1">AR Rahman Songs</button>
@@ -162,37 +139,42 @@
         <button class="btn btn-dark fw-bold fs-6 me-1">News</button>
       </div>
 
-      <!-- Video Grid -->
-      <div class="video-container" style="margin-top: 6em;">
-        <iframe src="https://www.youtube.com/embed/qeVfT2iLiu0" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/eGtDHht4VnU" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/1JJWmntMF2o" allowfullscreen></iframe>
-      </div>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/EPN3YghHPe0" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/e61ahdBvIk4" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/2qCpY38ompo" allowfullscreen></iframe>
-      </div>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/ZBY2-g27oTQ" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/j_ihB_TdVrM" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/7fUljO-O_-A" allowfullscreen></iframe>
-      </div>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/KHZldi5AHZw" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/6Af6b_wyiwI" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/mDOrn0jHw3o" allowfullscreen></iframe>
-      </div>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/6KvcChyHHoM" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/hfzo5nvkiEM" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/7CshC-7AGiI" allowfullscreen></iframe>
+      <!-- Video Containers -->
+      <div class="video-container" style="margin-top: 3em;">
+        <iframe src="https://www.youtube.com/embed/qeVfT2iLiu0?si=UGkR9osGpyZSmJ_Y" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/eGtDHht4VnU?si=msM6Ek_c1EoQXpiu" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/1JJWmntMF2o?si=xmTGEYSivq8p1EyL" allowfullscreen></iframe>
       </div>
 
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/EPN3YghHPe0?si=XX5LzJ9c5P7h88fD" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/e61ahdBvIk4?si=RuscliJLnrH1vAxn" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/2qCpY38ompo?si=Rxlo-9brvUYkxzD_" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ZBY2-g27oTQ?si=0xAYMQ3zJGFe2k4p" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/j_ihB_TdVrM?si=rFztfFXHkTV-YJRv" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/7fUljO-O_-A?si=a-li6w0YsDboq6ZW" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/KHZldi5AHZw?si=QM17-EAyNdxqxjCO" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/6Af6b_wyiwI?si=tpApyTdn1kabbMbG" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/mDOrn0jHw3o?si=xAPnOCuZWI6Al_yw" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/6KvcChyHHoM?si=X-pVir_cDb_zbSui" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/hfzo5nvkiEM?si=VnQ67zPDns9uZeKf" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/7CshC-7AGiI?si=5mj_YplTG73wP3u0" allowfullscreen></iframe>
+      </div>
     </section>
   </div>
 
+  <!--============ Scripts ==============-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
