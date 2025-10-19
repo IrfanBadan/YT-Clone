@@ -12,13 +12,48 @@
 </head>
 <body class="bg-black">
 
-  <!-- ======= Navbar ======= -->
+  <!--============ Navbar ==============-->
   <nav class="navbar navbar-expand-lg py-3 pb-0 fixed-top">
     <div class="navMain">
 
-      <!-- ===== Left Section ===== -->
+      <!-- ========== Nav First Div ============= -->
       <div class="navFirstDiv">
-        <div class="burger-menu" onclick="toggleSidebar()"><i class="bi bi-list"></i></div>
+        <div class="burger-menu" onclick="toggleSidebar()">
+          <i class="bi bi-list"></i>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar" class="sidebar">
+          <h3 class="menu-title">Menu</h3>
+          <hr style="border: 1px solid white;">
+          <div class="sidebar-section">
+            <a href="#" class="active"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a href="#"><i class="bi bi-lightning-fill"></i> Shorts</a>
+            <a href="#"><i class="bi bi-collection-play"></i> Subscriptions <span class="dot"></span></a>
+          </div>
+
+          <hr class="sidebar-divider" />
+
+          <div class="sidebar-section">
+            <div class="sidebar-heading fs-5">You <i class="bi bi-chevron-right"></i></div>
+            <a href="#"><i class="bi bi-clock-history"></i> History</a>
+            <a href="#"><i class="bi bi-list-task"></i> Playlists</a>
+            <a href="#"><i class="bi bi-camera-video"></i> Your videos</a>
+            <a href="#"><i class="bi bi-clock"></i> Watch Later</a>
+            <a href="#"><i class="bi bi-hand-thumbs-up"></i> Liked videos</a>
+
+            <hr class="sidebar-divider" />
+
+            <div class="sidebar-heading fs-5">Explore <i class="bi bi-chevron-right"></i></div>
+            <a href="#"><i class="bi bi-cart-check"></i> Shopping</a>
+            <a href="#"><i class="bi bi-music-note-beamed"></i> Music</a>
+            <a href="#"><i class="bi bi-film"></i> Films</a>
+            <a href="#"><i class="bi bi-controller"></i> Gaming</a>
+            <a href="#"><i class="bi bi-newspaper"></i> News</a>
+          </div>
+        </div>
+
+        <!-- Brand Name -->
         <div class="brand-Name">
           <div class="logo-image">
             <img src="./images/youtube-svgrepo-com.svg" class="logo" alt="YouTube Logo">
@@ -28,11 +63,13 @@
         </div>
       </div>
 
-      <!-- ===== Center Section ===== -->
+      <!-- ========== Nav Second Div ============ -->
       <div class="navSecondDiv">
-        <form class="d-flex nav-form input-group" role="search">
-          <input class="form-control searchInput" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success searchBtn" type="submit"><i class="bi bi-search"></i></button>
+        <form class="d-flex nav-form mt-1 input-group" role="search">
+          <input class="form-control searchInput" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success searchBtn" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
         </form>
         <a href="#"><i class="bi bi-mic-fill fs-5 micBtn"></i></a>
       </div>
@@ -81,6 +118,29 @@
       <a href="#"><i class="bi bi-newspaper"></i> News</a>
     </div>
   </div>
+
+  <!--============ Sidebar Icons ==============-->
+  <div class="d-flex">
+    <div id="side-bar" style="position: fixed;">
+      <div class="icons-div bg-black text-light ps-2" style="margin-top: 5em;">
+        <div class="text-center mb-3">
+          <i class="bi bi-house-fill fs-4"></i>
+          <p><a href="#" class="text-light text-decoration-none" style="font-size: 0.8em;">Home</a></p>
+        </div>
+        <div class="text-center mb-3">
+          <i class="bi bi-globe2 fs-4"></i>
+          <p><a href="#" class="text-light text-decoration-none" style="font-size: 0.8em;">Explore</a></p>
+        </div>
+        <div class="text-center mb-3">
+          <i class="bi bi-collection-play fs-4"></i>
+          <p><a href="#" class="text-light text-decoration-none" style="font-size: 0.8em;">Subscription</a></p>
+        </div>
+        <div class="text-center">
+          <i class="bi bi-person-circle fs-4"></i>
+          <p><a href="#" class="text-light text-decoration-none" style="font-size: 0.8em;">You</a></p>
+        </div>
+      </div>
+    </div>
 
   <!-- ===== Main Content ===== -->
   <div class="d-flex">
